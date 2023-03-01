@@ -70,7 +70,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    text-align: justify;
     margin-bottom: 40px;
 }
 
