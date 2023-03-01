@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 1.25;
+}
+
+body {
+    margin: 0 auto;
+    min-width: 350px;
+    font-size: 12px;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Font sizes */
+header > nav > i,h1 {font-size: 1.2rem;}
+header > nav > ul > li > a {font-size: 1.1rem;}
+.top-post > .post-title { font-size: 2rem;}
+.post-date, .selected-post-date {font-size: 1.1rem;}
+.post-title, .selected-post-title { font-size: 1.5rem;}
+.post-summary, .selected-post-summary, .selected-post-text {font-size: 1.1rem;}
+.view-more-btn {font-size: 1.1rem;}
+.about-me > h1 {font-size: 1.5rem;}
+.about-me > p {font-size: 1.1rem;}
+
+main {
+    max-width: 1700px;
+}
+header {
+    padding: 0 20px;
+    height: 60px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 100%;
+}
+
+ul {
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 20px;
+}
+
+.link {
+    text-decoration: underline;
+    color: black;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto 0 auto;
+
+}
+
+.top-post {
+    width: 100%;
+    height: 300px;
+    background-image: url('./images/main-img.jpg');
+    background-size: cover;
+    z-index: -1;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.post-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    max-width: 680px;
+}
+
+.post-title-link:link {
+    text-decoration: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+.post-title-link:visited {
+    text-decoration: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+.post-image {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 3px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.post-summary {
+    text-align: justify;
+    max-width: 680px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.recent-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.post {
+    width: 90%;
+}
+
+.view-more-btn {
+    visibility: hidden;
+    width: 100%;
+    margin: 20px auto 20px auto;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: 75px;
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+footer h3, footer p {
+    margin: 0;
+    padding-top: 3px;
+}
+
+
+/* article.html styles */
+
+.selected-post {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 50px auto;
+    width: 90%;
+}
+
+.selected-post-image {
+    display: block;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto 20px auto;
+    border-radius: 3px;
+}
+
+.selected-post-date,
+.selected-post-title,
+.selected-post-summary,
+.selected-post-text {
+    margin: 0 auto 20px auto;
+    text-align: justify;
+    max-width: 845px;
+}
+
+.recent-posts-header {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.three-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-width: 1500px;
+    margin: 0 auto 50px auto;
+}
+
+/* aboutme.html styles */
+
+.portrait {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 10px;
+    margin: 20px auto 50px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* media queries */
+
+@media screen and (min-width: 600px){
+    *{
+        font-size: 13px;
+    }
+
+    .three-posts {
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .top-post {
+        height: 400px;
+        padding-bottom: 50px;
+    }
+
+    .recent-posts {
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        gap: 30px;
+    }
+}
