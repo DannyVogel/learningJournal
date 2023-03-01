@@ -53,6 +53,12 @@ ul {
     color: black;
 }
 
+.header-link, .header-link > i {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
 main {
     width: 100%;
     margin: 0 auto 0 auto;
