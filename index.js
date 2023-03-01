@@ -1,15 +1,5 @@
 import { posts } from "./data.js";
 
-function getRandomImages() {
-    posts.forEach(item => {
-        item = {...item, image: "https://source.unsplash.com/random/900x700"}
-    })
-    console.log(posts)
-}
-getRandomImages()
-
-
-
 const viewMoreBtn = document.getElementById('view-more-btn')
 viewMoreBtn.addEventListener('click', () => {
     renderPosts(getMorePosts())
